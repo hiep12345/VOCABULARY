@@ -13,6 +13,9 @@ target 'VOCABULARY' do
     pod 'ObjectMapper', '~> 3.1'
     pod 'Firebase/Core'
     pod 'Firebase/Database'
+    pod 'youtube-ios-player-helper', '~> 0.1.4'
+    pod 'GoogleAPIClientForREST/YouTube', '~> 1.2.1'
+    pod 'Google/SignIn', '~> 3.0.3'
 
     target 'VOCABULARYTests' do
     inherit! :search_paths

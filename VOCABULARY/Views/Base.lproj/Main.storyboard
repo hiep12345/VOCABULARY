@@ -209,17 +209,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YP3-g4-Ree" customClass="YTPlayerView">
+                                <rect key="frame" x="10" y="226" width="300" height="332"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sUw-Lm-Puk" firstAttribute="top" secondItem="qYp-YL-73w" secondAttribute="bottom" constant="30" id="3NE-eh-Nmr"/>
+                            <constraint firstItem="YP3-g4-Ree" firstAttribute="leading" secondItem="CvN-5F-NFt" secondAttribute="leading" constant="10" id="Ehk-VR-fcq"/>
                             <constraint firstItem="2qX-WQ-fyB" firstAttribute="top" secondItem="CvN-5F-NFt" secondAttribute="top" constant="20" id="FyW-Fw-1Tw"/>
                             <constraint firstItem="CvN-5F-NFt" firstAttribute="trailing" secondItem="sUw-Lm-Puk" secondAttribute="trailing" constant="20" id="Oq9-ci-Vfo"/>
                             <constraint firstItem="yv5-lL-pdE" firstAttribute="top" secondItem="CvN-5F-NFt" secondAttribute="top" constant="20" id="UGz-mL-e9t"/>
+                            <constraint firstItem="YP3-g4-Ree" firstAttribute="top" secondItem="sUw-Lm-Puk" secondAttribute="bottom" constant="30" id="V06-rp-U2b"/>
+                            <constraint firstItem="CvN-5F-NFt" firstAttribute="bottom" secondItem="YP3-g4-Ree" secondAttribute="bottom" constant="10" id="We4-mu-Rm5"/>
                             <constraint firstItem="qYp-YL-73w" firstAttribute="top" secondItem="2qX-WQ-fyB" secondAttribute="bottom" constant="20" id="agZ-Ty-Cqn"/>
                             <constraint firstItem="sUw-Lm-Puk" firstAttribute="leading" secondItem="CvN-5F-NFt" secondAttribute="leading" constant="20" id="ecn-oI-h8U"/>
                             <constraint firstItem="qYp-YL-73w" firstAttribute="centerX" secondItem="2qX-WQ-fyB" secondAttribute="centerX" id="h4D-40-DIF"/>
                             <constraint firstItem="CvN-5F-NFt" firstAttribute="trailing" secondItem="yv5-lL-pdE" secondAttribute="trailing" constant="20" id="naA-D4-DM7"/>
+                            <constraint firstItem="CvN-5F-NFt" firstAttribute="trailing" secondItem="YP3-g4-Ree" secondAttribute="trailing" constant="10" id="pQd-ZO-X11"/>
                             <constraint firstItem="2qX-WQ-fyB" firstAttribute="centerX" secondItem="CvN-5F-NFt" secondAttribute="centerX" id="xBj-ct-cRn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CvN-5F-NFt"/>
@@ -234,6 +242,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="content" destination="sUw-Lm-Puk" id="s8Y-dp-FOg"/>
+                        <outlet property="playerView" destination="YP3-g4-Ree" id="7hF-h8-DOb"/>
                         <outlet property="spell" destination="qYp-YL-73w" id="Hsl-f8-X9V"/>
                         <outlet property="word" destination="2qX-WQ-fyB" id="IA3-w5-06t"/>
                     </connections>

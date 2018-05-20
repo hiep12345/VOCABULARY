@@ -132,8 +132,6 @@ extension ShowCartViewController {
 
 extension ShowCartViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
-    
-    
     func collectionView(_ collectionView: UICollectionView,numberOfItemsInSection section: Int) -> Int {
         return itemCards.count
     }
@@ -144,7 +142,6 @@ extension ShowCartViewController:UICollectionViewDataSource,UICollectionViewDele
                                                       for: indexPath) as! CardWordCell
         cell.word.text = itemCards[indexPath.row].word
         cell.spell.text = itemCards[indexPath.row].spell
-        print(itemCards[indexPath.row].imgURL!)
         cell.imgCard.sd_setImage(with: URL(string: itemCards[indexPath.row].imgURL!), placeholderImage:  UIImage(named: "noImage"), options: .refreshCached, completed: nil)
         return cell
     }
@@ -197,6 +194,7 @@ extension ShowCartViewController {
     
     @IBAction func bntDetectNextDetail(_ sender: UIButton) {
         if isTrueSpell!{
+            self.dectectStartRecord()
             let indexPaths = self.collectionView.indexPathsForVisibleItems
             let indexSelect = indexPaths.first?.row
             self.navigationController?.isNavigationBarHidden = false
@@ -221,8 +219,8 @@ extension ShowCartViewController {
             startButton.setImage(UIImage(named: "record"), for: .normal)
         } else {
             startRecording()
-            startButton.setImage(UIImage(named: "record_sellect"), for: .normal)
             self.btnNextDetail.alpha = 0
+            startButton.setImage(UIImage(named: "record_sellect"), for: .normal)
             
         }
     }
@@ -321,7 +319,6 @@ extension ShowCartViewController {
 // MARK: UITEXTFIELD DELEGATE
 extension ShowCartViewController:UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        // Implement your Date Time Picker initial Code here
         return false
     }
 }

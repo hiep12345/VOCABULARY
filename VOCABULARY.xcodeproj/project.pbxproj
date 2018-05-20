@@ -24,6 +24,7 @@
 		CD9EC01320A69CB200C2B076 /* TabMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9EC01220A69CB200C2B076 /* TabMainViewController.swift */; };
 		CD9EC01520A6A4CC00C2B076 /* CardWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9EC01420A6A4CC00C2B076 /* CardWordCell.swift */; };
 		CD9EC01A20A6AD7D00C2B076 /* Extention_UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9EC01920A6AD7D00C2B076 /* Extention_UIView.swift */; };
+		CDA835DC20B17AF300E23F4B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA835DB20B17AF300E23F4B /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		CD9EC01220A69CB200C2B076 /* TabMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabMainViewController.swift; sourceTree = "<group>"; };
 		CD9EC01420A6A4CC00C2B076 /* CardWordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardWordCell.swift; sourceTree = "<group>"; };
 		CD9EC01920A6AD7D00C2B076 /* Extention_UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention_UIView.swift; sourceTree = "<group>"; };
+		CDA835D720B07A1D00E23F4B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		CDA835DB20B17AF300E23F4B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		D89EA9E4FFE16A1C04C131D8 /* Pods-VOCABULARY.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOCABULARY.release.xcconfig"; path = "Pods/Target Support Files/Pods-VOCABULARY/Pods-VOCABULARY.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDA835DC20B17AF300E23F4B /* iAd.framework in Frameworks */,
 				C3CA52F26A39F64DB6B1BD07 /* Pods_VOCABULARY.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +110,8 @@
 		3B825BD4EF9D9F21F0CD4452 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDA835DB20B17AF300E23F4B /* iAd.framework */,
+				CDA835D720B07A1D00E23F4B /* AdSupport.framework */,
 				8C66109CF4A0D4FF9EA5878A /* Pods_VOCABULARY.framework */,
 				7C4BC9EB63C5A27EF8B897A9 /* Pods_VOCABULARYTests.framework */,
 				6AC4CF7EE4F4278D6C56DE9C /* Pods_VOCABULARYUITests.framework */,
@@ -124,6 +130,14 @@
 				5C7DB03A82FD3C96C9FE2795 /* Pods-VOCABULARYUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD26AE0620B0108000BA119A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CD9EC01420A6A4CC00C2B076 /* CardWordCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		CD86C6AF20A6892500170E04 = {
@@ -200,9 +214,9 @@
 		CD86C6EB20A68DFA00170E04 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CD26AE0620B0108000BA119A /* Cell */,
 				CD9EC01220A69CB200C2B076 /* TabMainViewController.swift */,
 				CD86C6BD20A6892500170E04 /* ShowCartViewController.swift */,
-				CD9EC01420A6A4CC00C2B076 /* CardWordCell.swift */,
 				04A5C49420AC085700664884 /* DetailCardViewController.swift */,
 			);
 			path = Controllers;
@@ -246,6 +260,7 @@
 				CD86C6B520A6892500170E04 /* Frameworks */,
 				CD86C6B620A6892500170E04 /* Resources */,
 				1B012FD2B83D9F3652D9FDEB /* [CP] Embed Pods Frameworks */,
+				603D0C9B5FBEB073834FDC18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -376,25 +391,29 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VOCABULARY/Pods-VOCABULARY-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/UIImageViewAlignedSwift/UIImageViewAlignedSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIImageViewAlignedSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -417,6 +436,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		603D0C9B5FBEB073834FDC18 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VOCABULARY/Pods-VOCABULARY-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VOCABULARY/Pods-VOCABULARY-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7643473FC38AE9D2F3BFCAD0 /* [CP] Check Pods Manifest.lock */ = {

@@ -14,6 +14,7 @@ class ItemCard:Mappable{
     var word: String?
     var spell: String?
     var imgURL: String?
+    var urlYouTuBe:String?
     var content:String?
 
     
@@ -27,6 +28,7 @@ class ItemCard:Mappable{
         word         <- map["word"]
         spell        <- map["spell"]
         imgURL       <- map["imgURL"]
+        urlYouTuBe   <- map ["urlYouTuBe"]
         content      <- map["content"]
     }
 }
