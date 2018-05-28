@@ -22,7 +22,6 @@ class DetailCardViewController: UIViewController,YTPlayerViewDelegate {
         playerView.delegate = self
         let dict = ["modestbranding" : 0,"controls" : 1 ,"autoplay" : 0,"playsinline" : 1,"autohide" : 1,"showinfo" : 1]
         playerView.load(withVideoId:(itemCard?.urlYouTuBe)!,playerVars: dict)
-        
         self.word.text = itemCard?.word
         self.spell.text = itemCard?.spell
         self.content.text = itemCard?.content
@@ -39,7 +38,7 @@ class DetailCardViewController: UIViewController,YTPlayerViewDelegate {
             print(error)
         }
     }
-
+    
     
     @IBAction func speaker(_ sender: Any) {
         let synth = AVSpeechSynthesizer()
@@ -63,7 +62,4 @@ class DetailCardViewController: UIViewController,YTPlayerViewDelegate {
     @IBAction func Back(_ sender: Any) {
         self.navigationController?.popViewController(animated: false)
     }
-    
-
-    
 }

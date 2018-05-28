@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChooseImgCell" id="17w-aK-bnJ" customClass="ChooseImageCell" customModule="VOCABULARY" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1m-MA-dN7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="T67-nw-Jsd">
+                                <rect key="frame" x="0.0" y="130" width="320" height="259.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="c6M-Bg-mmG">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whz-Cm-Iwv">
+                                <rect key="frame" x="10" y="60.5" width="300" height="39.5"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T67-nw-Jsd" firstAttribute="width" secondItem="n1m-MA-dN7" secondAttribute="width" id="F6K-ae-lCG"/>
+                            <constraint firstItem="T67-nw-Jsd" firstAttribute="top" secondItem="whz-Cm-Iwv" secondAttribute="bottom" constant="30" id="HjC-Fh-J9w"/>
+                            <constraint firstItem="T67-nw-Jsd" firstAttribute="centerX" secondItem="n1m-MA-dN7" secondAttribute="centerX" id="KZh-H1-yoy"/>
+                            <constraint firstItem="T67-nw-Jsd" firstAttribute="height" secondItem="n1m-MA-dN7" secondAttribute="height" multiplier="1:2" id="SFp-aK-1bp"/>
+                            <constraint firstItem="T67-nw-Jsd" firstAttribute="centerY" secondItem="n1m-MA-dN7" secondAttribute="centerY" id="Vdg-Lf-CCv"/>
+                            <constraint firstAttribute="trailing" secondItem="whz-Cm-Iwv" secondAttribute="trailing" constant="10" id="Zb3-g7-Scw"/>
+                            <constraint firstItem="whz-Cm-Iwv" firstAttribute="leading" secondItem="n1m-MA-dN7" secondAttribute="leading" constant="10" id="nkq-ik-mxV"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="n1m-MA-dN7" firstAttribute="leading" secondItem="17w-aK-bnJ" secondAttribute="leading" id="B8j-a2-6wf"/>
+                <constraint firstItem="n1m-MA-dN7" firstAttribute="top" secondItem="17w-aK-bnJ" secondAttribute="top" id="ptT-yN-WjB"/>
+                <constraint firstAttribute="trailing" secondItem="n1m-MA-dN7" secondAttribute="trailing" id="tCt-iV-KKr"/>
+                <constraint firstAttribute="bottom" secondItem="n1m-MA-dN7" secondAttribute="bottom" id="uq7-iX-r1c"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="TZH-Tk-fdV"/>
+            <size key="customSize" width="638" height="375"/>
+            <connections>
+                <outlet property="imgcollectionView" destination="T67-nw-Jsd" id="tVo-Qa-MIZ"/>
+                <outlet property="lblWord" destination="whz-Cm-Iwv" id="z0t-KZ-U99"/>
+            </connections>
+            <point key="canvasLocation" x="-286" y="-3"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -12,7 +12,7 @@ import Speech
 import SDWebImage
 
 //MARK:VARIABLE
-class ShowCartViewController: UIViewController,SFSpeechRecognizerDelegate {
+class Game5ViewController: UIViewController,SFSpeechRecognizerDelegate {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var btnNextDetail: UIButton!
@@ -61,7 +61,7 @@ class ShowCartViewController: UIViewController,SFSpeechRecognizerDelegate {
     }
 }
 //MARK:LIFE CYCLE
-extension ShowCartViewController {
+extension Game5ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupData()
@@ -76,7 +76,7 @@ extension ShowCartViewController {
 
 
 //MARK: OTHER FUNCTION
-extension ShowCartViewController {
+extension Game5ViewController {
     func setupData(){
         apiService.loadItemCards(day: "12-05-2018", idUser: nil) { (itemCards, error) in
             if error == nil {
@@ -130,7 +130,7 @@ extension ShowCartViewController {
 
 //MARK:UICOLLECTIONVIEW DATASOURCE, DELEGATE
 
-extension ShowCartViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+extension Game5ViewController:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView,numberOfItemsInSection section: Int) -> Int {
         return itemCards.count
@@ -177,13 +177,11 @@ extension ShowCartViewController:UICollectionViewDataSource,UICollectionViewDele
         recognitionRequest?.endAudio()
         startButton.setImage(UIImage(named: "record"), for: .normal)
     }
-    
-    
 }
 
 //MARK:SPEECH DELEGATE --> Record and get text
 
-extension ShowCartViewController {
+extension Game5ViewController {
     
     //MARK: IBActions and Cancel
     
@@ -195,13 +193,7 @@ extension ShowCartViewController {
     @IBAction func bntDetectNextDetail(_ sender: UIButton) {
         if isTrueSpell!{
             self.dectectStartRecord()
-            let indexPaths = self.collectionView.indexPathsForVisibleItems
-            let indexSelect = indexPaths.first?.row
-            self.navigationController?.isNavigationBarHidden = false
-            let nextView                       = self.storyboard?.instantiateViewController(withIdentifier: "DetailCard") as! DetailCardViewController
-            nextView.itemCard                  = itemCards[indexSelect!]
-            nextView.hidesBottomBarWhenPushed  = true
-            self.navigationController?.pushViewController(nextView, animated: true)
+         
         }else{
             self.isNextItem = true
             audioEngine.stop()
@@ -308,7 +300,6 @@ extension ShowCartViewController {
     }
     
     //MARK: - Alert
-    
     func sendAlert(message: String) {
         let alert = UIAlertController(title: "Speech Recognizer Error", message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -317,7 +308,7 @@ extension ShowCartViewController {
 }
 
 // MARK: UITEXTFIELD DELEGATE
-extension ShowCartViewController:UITextFieldDelegate {
+extension Game5ViewController:UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         return false
     }
