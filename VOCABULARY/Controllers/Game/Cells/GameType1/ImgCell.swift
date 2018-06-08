@@ -7,7 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ImgCell: UICollectionViewCell {
-    
+    @IBOutlet weak var img: UIImageView!
 }

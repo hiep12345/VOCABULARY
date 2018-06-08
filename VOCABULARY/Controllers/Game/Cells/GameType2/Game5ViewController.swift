@@ -193,7 +193,7 @@ extension Game5ViewController {
     @IBAction func bntDetectNextDetail(_ sender: UIButton) {
         if isTrueSpell!{
             self.dectectStartRecord()
-         
+            
         }else{
             self.isNextItem = true
             audioEngine.stop()
@@ -297,6 +297,7 @@ extension Game5ViewController {
         } else {
             startButton.isEnabled = false
         }
+        
     }
     
     //MARK: - Alert

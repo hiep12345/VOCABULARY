@@ -10,16 +10,19 @@
 		04260C7D20BBB1E200EE5AFF /* ChooseImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04260C7C20BBB1E200EE5AFF /* ChooseImageCell.xib */; };
 		04260C7F20BBB2F200EE5AFF /* ImgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04260C7E20BBB2F200EE5AFF /* ImgCell.xib */; };
 		04260C8120BBB4B300EE5AFF /* ShowCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04260C8020BBB4B300EE5AFF /* ShowCardViewController.swift */; };
-		04260C8620BBF47100EE5AFF /* ChooseImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04260C8520BBF47100EE5AFF /* ChooseImageCell.swift */; };
-		04260C8820BBF80100EE5AFF /* ImgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04260C8720BBF80100EE5AFF /* ImgCell.swift */; };
 		04260C8A20BC061800EE5AFF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04260C8920BC061800EE5AFF /* GameViewController.swift */; };
+		0467FB1620CA2FBA00294783 /* ChooseImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467FB1420CA2FB900294783 /* ChooseImageCell.swift */; };
+		0467FB1720CA2FBA00294783 /* ImgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467FB1520CA2FBA00294783 /* ImgCell.swift */; };
+		0467FB1A20CA2FCE00294783 /* Game5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467FB1920CA2FCD00294783 /* Game5ViewController.swift */; };
+		0467FB1C20CA2FEB00294783 /* ItemsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467FB1B20CA2FEB00294783 /* ItemsRepository.swift */; };
+		0467FB1E20CA377200294783 /* ListNewWordsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467FB1D20CA377200294783 /* ListNewWordsController.swift */; };
 		0498418920B2ADCE00447BE9 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0498418820B2ADCE00447BE9 /* PracticeViewController.swift */; };
 		04A5C49520AC085700664884 /* DetailCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A5C49420AC085700664884 /* DetailCardViewController.swift */; };
+		04C14DD720CA410F00EE2CCD /* ListNewWordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C14DD620CA410F00EE2CCD /* ListNewWordCell.swift */; };
 		40AA97EA3F10D2C1AABF2447 /* Pods_VOCABULARYTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4BC9EB63C5A27EF8B897A9 /* Pods_VOCABULARYTests.framework */; };
 		912314C8EEEEF7C48F236A8A /* Pods_VOCABULARYUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AC4CF7EE4F4278D6C56DE9C /* Pods_VOCABULARYUITests.framework */; };
 		C3CA52F26A39F64DB6B1BD07 /* Pods_VOCABULARY.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C66109CF4A0D4FF9EA5878A /* Pods_VOCABULARY.framework */; };
 		CD86C6BC20A6892500170E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86C6BB20A6892500170E04 /* AppDelegate.swift */; };
-		CD86C6BE20A6892500170E04 /* Game5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86C6BD20A6892500170E04 /* Game5ViewController.swift */; };
 		CD86C6C120A6892500170E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD86C6BF20A6892500170E04 /* Main.storyboard */; };
 		CD86C6C320A6892500170E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD86C6C220A6892500170E04 /* Assets.xcassets */; };
 		CD86C6C620A6892500170E04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD86C6C420A6892500170E04 /* LaunchScreen.storyboard */; };
@@ -55,11 +58,15 @@
 		04260C7C20BBB1E200EE5AFF /* ChooseImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChooseImageCell.xib; sourceTree = "<group>"; };
 		04260C7E20BBB2F200EE5AFF /* ImgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImgCell.xib; sourceTree = "<group>"; };
 		04260C8020BBB4B300EE5AFF /* ShowCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowCardViewController.swift; sourceTree = "<group>"; };
-		04260C8520BBF47100EE5AFF /* ChooseImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseImageCell.swift; sourceTree = "<group>"; };
-		04260C8720BBF80100EE5AFF /* ImgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgCell.swift; sourceTree = "<group>"; };
 		04260C8920BC061800EE5AFF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		0467FB1420CA2FB900294783 /* ChooseImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChooseImageCell.swift; path = GameType1/ChooseImageCell.swift; sourceTree = "<group>"; };
+		0467FB1520CA2FBA00294783 /* ImgCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImgCell.swift; path = GameType1/ImgCell.swift; sourceTree = "<group>"; };
+		0467FB1920CA2FCD00294783 /* Game5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game5ViewController.swift; path = GameType2/Game5ViewController.swift; sourceTree = "<group>"; };
+		0467FB1B20CA2FEB00294783 /* ItemsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsRepository.swift; sourceTree = "<group>"; };
+		0467FB1D20CA377200294783 /* ListNewWordsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNewWordsController.swift; sourceTree = "<group>"; };
 		0498418820B2ADCE00447BE9 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
 		04A5C49420AC085700664884 /* DetailCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCardViewController.swift; sourceTree = "<group>"; };
+		04C14DD620CA410F00EE2CCD /* ListNewWordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNewWordCell.swift; sourceTree = "<group>"; };
 		349DCB81B5A3287DB539D9AE /* Pods-VOCABULARYTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOCABULARYTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VOCABULARYTests/Pods-VOCABULARYTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C7DB03A82FD3C96C9FE2795 /* Pods-VOCABULARYUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOCABULARYUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VOCABULARYUITests/Pods-VOCABULARYUITests.release.xcconfig"; sourceTree = "<group>"; };
 		613E54166F6351F9ADDFC3BE /* Pods-VOCABULARYUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOCABULARYUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VOCABULARYUITests/Pods-VOCABULARYUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,7 +77,6 @@
 		A03AE48C2254AF030C182D4F /* Pods-VOCABULARYTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOCABULARYTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VOCABULARYTests/Pods-VOCABULARYTests.release.xcconfig"; sourceTree = "<group>"; };
 		CD86C6B820A6892500170E04 /* VOCABULARY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOCABULARY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD86C6BB20A6892500170E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD86C6BD20A6892500170E04 /* Game5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game5ViewController.swift; sourceTree = "<group>"; };
 		CD86C6C020A6892500170E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD86C6C220A6892500170E04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD86C6C520A6892500170E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -127,7 +133,6 @@
 				04260C8920BC061800EE5AFF /* GameViewController.swift */,
 				04260C8420BBF44700EE5AFF /* Cells */,
 				0498418820B2ADCE00447BE9 /* PracticeViewController.swift */,
-				CD86C6BD20A6892500170E04 /* Game5ViewController.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			children = (
 				04260C8020BBB4B300EE5AFF /* ShowCardViewController.swift */,
 				04A5C49420AC085700664884 /* DetailCardViewController.swift */,
+				0467FB1D20CA377200294783 /* ListNewWordsController.swift */,
 				CD26AE0620B0108000BA119A /* Cell */,
 			);
 			path = ShowCard;
@@ -145,8 +151,9 @@
 		04260C8420BBF44700EE5AFF /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				04260C8520BBF47100EE5AFF /* ChooseImageCell.swift */,
-				04260C8720BBF80100EE5AFF /* ImgCell.swift */,
+				0467FB1920CA2FCD00294783 /* Game5ViewController.swift */,
+				0467FB1420CA2FB900294783 /* ChooseImageCell.swift */,
+				0467FB1520CA2FBA00294783 /* ImgCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -180,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				CD9EC01420A6A4CC00C2B076 /* CardWordCell.swift */,
+				04C14DD620CA410F00EE2CCD /* ListNewWordCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 		CD86C6E920A6895A00170E04 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0467FB1B20CA2FEB00294783 /* ItemsRepository.swift */,
 				CD988E0920A7F123001A484C /* ItemCard.swift */,
 			);
 			path = Models;
@@ -548,17 +557,20 @@
 			files = (
 				CD9EC01A20A6AD7D00C2B076 /* Extention_UIView.swift in Sources */,
 				CD9EC01320A69CB200C2B076 /* TabMainViewController.swift in Sources */,
+				04C14DD720CA410F00EE2CCD /* ListNewWordCell.swift in Sources */,
+				0467FB1A20CA2FCE00294783 /* Game5ViewController.swift in Sources */,
+				0467FB1E20CA377200294783 /* ListNewWordsController.swift in Sources */,
 				CD9EC01520A6A4CC00C2B076 /* CardWordCell.swift in Sources */,
 				0498418920B2ADCE00447BE9 /* PracticeViewController.swift in Sources */,
 				04260C8A20BC061800EE5AFF /* GameViewController.swift in Sources */,
-				CD86C6BE20A6892500170E04 /* Game5ViewController.swift in Sources */,
-				04260C8820BBF80100EE5AFF /* ImgCell.swift in Sources */,
+				0467FB1720CA2FBA00294783 /* ImgCell.swift in Sources */,
 				CD86C6BC20A6892500170E04 /* AppDelegate.swift in Sources */,
+				0467FB1C20CA2FEB00294783 /* ItemsRepository.swift in Sources */,
 				04A5C49520AC085700664884 /* DetailCardViewController.swift in Sources */,
 				CD988E0620A6BA17001A484C /* APIService.swift in Sources */,
 				CD988E0A20A7F123001A484C /* ItemCard.swift in Sources */,
 				04260C8120BBB4B300EE5AFF /* ShowCardViewController.swift in Sources */,
-				04260C8620BBF47100EE5AFF /* ChooseImageCell.swift in Sources */,
+				0467FB1620CA2FBA00294783 /* ChooseImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

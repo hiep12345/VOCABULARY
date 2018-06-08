@@ -39,6 +39,4 @@ extension UIView {
             return layer.cornerRadius
         }
     }
-    
-    
 }

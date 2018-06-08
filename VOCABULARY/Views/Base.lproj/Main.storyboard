@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1bW-mQ-29N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1bW-mQ-29N">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,78 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--LIST WORD-->
+        <scene sceneID="zvs-im-TaL">
+            <objects>
+                <viewController storyboardIdentifier="ListNewWords" id="Sk6-vg-DoA" customClass="ListNewWordsController" customModule="VOCABULARY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jsI-WS-Xpw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EwM-xe-RKt">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="66" id="9RT-Kt-70K" customClass="ListNewWordCell" customModule="VOCABULARY" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="66"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9RT-Kt-70K" id="syp-Nb-cky">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="65.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9aT-4x-Jgs">
+                                                    <rect key="frame" x="20" y="22" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xmi-sc-XMh">
+                                                    <rect key="frame" x="280" y="22" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="WoU-47-M7v"/>
+                                                        <constraint firstAttribute="height" constant="20" id="gtq-yE-IS4"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="9aT-4x-Jgs" firstAttribute="centerY" secondItem="syp-Nb-cky" secondAttribute="centerY" id="6I6-El-Sol"/>
+                                                <constraint firstAttribute="trailing" secondItem="xmi-sc-XMh" secondAttribute="trailing" constant="20" id="GBb-Sw-Rwo"/>
+                                                <constraint firstItem="9aT-4x-Jgs" firstAttribute="leading" secondItem="syp-Nb-cky" secondAttribute="leading" constant="20" id="M8W-My-5vE"/>
+                                                <constraint firstItem="xmi-sc-XMh" firstAttribute="centerY" secondItem="syp-Nb-cky" secondAttribute="centerY" id="rZP-Xx-JUn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="word" destination="9aT-4x-Jgs" id="rsi-xK-VoQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dRu-RB-Q3j" firstAttribute="trailing" secondItem="EwM-xe-RKt" secondAttribute="trailing" id="LZs-vC-rZ4"/>
+                            <constraint firstItem="EwM-xe-RKt" firstAttribute="top" secondItem="dRu-RB-Q3j" secondAttribute="top" id="eO7-YP-Bu9"/>
+                            <constraint firstItem="dRu-RB-Q3j" firstAttribute="bottom" secondItem="EwM-xe-RKt" secondAttribute="bottom" id="h7c-to-EKr"/>
+                            <constraint firstItem="EwM-xe-RKt" firstAttribute="leading" secondItem="jsI-WS-Xpw" secondAttribute="leading" id="iqO-kT-5IP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dRu-RB-Q3j"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LIST WORD" id="5gb-NM-Idl">
+                        <barButtonItem key="leftBarButtonItem" image="ic_back" id="v2F-7J-adR">
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="Back:" destination="Sk6-vg-DoA" id="0Ee-R3-I0Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="EwM-xe-RKt" id="xeG-bu-gpa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3R-Ek-f9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147.5" y="-1509.5070422535211"/>
+        </scene>
         <!--Show Card View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -26,6 +98,9 @@
                                     <constraint firstAttribute="width" constant="30" id="Jdw-Tk-Hyv"/>
                                 </constraints>
                                 <state key="normal" image="list"/>
+                                <connections>
+                                    <action selector="listNewWord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G87-0O-2cR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYd-kL-FNe" userLabel="play/pause">
                                 <rect key="frame" x="270" y="40" width="30" height="30"/>
@@ -135,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151" y="-739"/>
+            <point key="canvasLocation" x="1048" y="-739"/>
         </scene>
         <!--DETAIL CARD-->
         <scene sceneID="d34-9h-QbQ">

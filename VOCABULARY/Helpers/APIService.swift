@@ -54,8 +54,8 @@ class APIService {
         self.ref.child(path).observeSingleEvent(of: .value, with: { (snapshot) in
              let value = snapshot
                 .children
-                .flatMap{$0 as? FIRDataSnapshot}
-                .flatMap{$0.value as? [String:Any]}
+                .compactMap{$0 as? FIRDataSnapshot}
+                .compactMap{$0.value as? [String:Any]}
                 let arrayItemCards = Mapper<ItemCard>().mapArray(JSONArray: value)
             completionHandler(arrayItemCards,nil)
         })

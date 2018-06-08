@@ -36,7 +36,6 @@ extension TabMainViewController{
                 self.tabBar.items?[i].selectedImage = UIImage(named: imageNameForSelectedState)?.withRenderingMode(.alwaysOriginal)
                 self.tabBar.items?[i].image = UIImage(named: imageNameForUnselectedState)?.withRenderingMode(.alwaysOriginal)
             }
-            
         }
         let selectedColor   = UIColor(red: 21/255.0, green: 155/255.0, blue: 74/255.0, alpha: 1.0)
         let unselectedColor = UIColor.gray
@@ -49,7 +48,6 @@ extension TabMainViewController{
         
         
     }
-    
 }
 
 

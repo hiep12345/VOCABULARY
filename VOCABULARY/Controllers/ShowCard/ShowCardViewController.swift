@@ -14,12 +14,11 @@ import AVFoundation
 class ShowCardViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnPlay: UIButton!
-    
+    let itemRepository = ItemsRepository.shared
     fileprivate let reuseIdentifier = "CardCell"
     fileprivate let sectionInsets = UIEdgeInsets(top: 20.0, left: 0.0, bottom: 0.0, right: 0.0)
     fileprivate let itemsPerRow: CGFloat = 1
     fileprivate var itemCards:[ItemCard] = []
-    let apiService = APIService.sharedInstance
     var timer:Timer? = nil
     var isPlay = false {
         didSet{
@@ -50,9 +49,9 @@ extension ShowCardViewController {
 //MARK: OTHER FUNCTION
 extension ShowCardViewController {
     func setupData(){
-        apiService.loadItemCards(day: "12-05-2018", idUser: nil) { (itemCards, error) in
-            if error == nil {
-                self.itemCards = itemCards!
+        self.itemRepository.getAllItems(self) { (complete) in
+            if complete{
+                self.itemCards = self.itemRepository.itemCards
                 self.collectionView.reloadData()
             }
         }
@@ -81,7 +80,7 @@ extension ShowCardViewController {
             print(error)
         }
     }
-    
+
     @IBAction func autoNextNewWords(_ sender: Any) {
         if isPlay {
             self.isPlay = false
@@ -90,6 +89,18 @@ extension ShowCardViewController {
             self.isPlay = true
             self.reloadCollectionView()
         }
+    }
+    
+    /*  List New Word */
+    
+    @IBAction func listNewWord(_ sender: Any) {
+        self.navigationController?.isNavigationBarHidden = false
+        let nextView                       = self.storyboard?.instantiateViewController(withIdentifier: "ListNewWords") as! ListNewWordsController
+        nextView.itemCards                 = itemCards
+        nextView.hidesBottomBarWhenPushed  = true
+        nextView.modalTransitionStyle = .flipHorizontal
+        nextView.modalPresentationStyle = .custom
+        self.show(nextView, sender: self)
     }
 }
 
@@ -141,12 +152,10 @@ extension ShowCardViewController:UICollectionViewDataSource,UICollectionViewDele
         return sectionInsets
     }
     
-    
     // 4
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
     }
-    
     
     //After you've received data from server or you are ready with the itemCards, call this method. Magic!
     func reloadCollectionView() {

@@ -38,8 +38,7 @@ class DetailCardViewController: UIViewController,YTPlayerViewDelegate {
             print(error)
         }
     }
-    
-    
+
     @IBAction func speaker(_ sender: Any) {
         let synth = AVSpeechSynthesizer()
         do {

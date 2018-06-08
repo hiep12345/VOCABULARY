@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,17 +19,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="370" height="237"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="881-Ws-ciP">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="881-Ws-ciP" customClass="UIImageViewAligned" customModule="UIImageViewAlignedSwift">
                         <rect key="frame" x="0.0" y="0.0" width="370" height="237"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="10"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </imageView>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="881-Ws-ciP" firstAttribute="top" secondItem="h6B-kt-hC3" secondAttribute="top" id="9fL-r3-4wI"/>
                 <constraint firstAttribute="bottom" secondItem="881-Ws-ciP" secondAttribute="bottom" id="A35-ls-av3"/>
@@ -39,7 +34,7 @@
             <viewLayoutGuide key="safeArea" id="xND-pX-diG"/>
             <size key="customSize" width="370" height="237"/>
             <connections>
-                <outlet property="img" destination="881-Ws-ciP" id="6ca-SM-chW"/>
+                <outlet property="img" destination="881-Ws-ciP" id="rKR-rz-GAb"/>
             </connections>
             <point key="canvasLocation" x="-25" y="-32"/>
         </collectionViewCell>
